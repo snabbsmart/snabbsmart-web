@@ -1,24 +1,109 @@
-.App {
-  text-align: center;
+
+/* Highlighting
+ * -----------------------------------------*/
+
+/* * { */
+/*   outline: 1px solid rgba(0, 0, 0, 0.3); */
+/* } */
+
+/* Layout
+ * -----------------------------------------*/
+
+main {
+  height: 100%;
+  width: 100%;
+  background: lightgrey;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+@media screen and (min-width: 800px) {
+  main {
+    width: 800px;
+  }
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.row {
   padding: 20px;
+}
+
+.row {
+  display: block;
+}
+
+.center-column {
+  box-sizing: border-box;
+  transform: translateX(-50%);
+  position: absolute;
+  display: block;
+  left: 50%;
+}
+
+.separator {
+  border-bottom: 1px solid black;
+}
+
+.card {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dim {
+  background: gray;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+/* Text
+ * -----------------------------------------*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.text-center { text-align: center; }
+
+h2 { margin-bottom: 0; }
+
+/* Players
+ * -----------------------------------------*/
+
+@media screen and (min-width: 1000px) {
+  #player-list {
+    width: 1000px;
+  }
 }
+
+#player-list {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.player-icon {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+.player-footer {
+  text-align: center;
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 100%;
+  bottom: 0;
+  font-size: 50%;
+}
+
+/* Animations
+ * -----------------------------------------*/
+
+@keyframes scale-in {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
